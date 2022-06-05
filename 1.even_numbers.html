@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>even numbers</title>
+
+</head>
+<body>
+    <form>
+    <input type="number" id="val" placeholder="Enter number"/>
+    <input type="button" value="output" onclick="printvalue()"/>
+    </form>
+
+    <ul id="print">
+        
+    </ul>
+    <script>
+        function printvalue()
+        {
+            var n=document.getElementById("val").value;
+            n=Number(n);
+            var i=0;
+            ul_tag=document.getElementById('print');
+            for (i;i<=n;i++)
+            {
+                if (i%2 == 0)
+                { 
+                    console.log(i);
+                    li_tag=document.createElement('li');
+                    text_node=document.createTextNode(i);
+                    li_tag.appendChild(text_node);
+                    ul_tag.appendChild(li_tag);
+                }
+            }
+        }
+    </script>    
+</body>
+</html>
